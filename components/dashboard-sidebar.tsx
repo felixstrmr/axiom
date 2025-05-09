@@ -2,7 +2,7 @@
 
 import { Separator } from '@/components/ui/separator'
 import { cn } from '@/lib/utils'
-import { LucideIcon, Server, Settings } from 'lucide-react'
+import { Home, LucideIcon, Server, Settings } from 'lucide-react'
 import Link from 'next/link'
 import { useSelectedLayoutSegment } from 'next/navigation'
 
@@ -11,10 +11,16 @@ export default function DashboardSidebar() {
 
   const items = [
     {
-      name: 'Servers',
+      name: 'Dashboard',
       href: '/',
+      icon: Home,
+      isActive: segment === null,
+    },
+    {
+      name: 'Servers',
+      href: '/servers',
       icon: Server,
-      isActive: segment === '(servers)',
+      isActive: segment === 'servers',
     },
     {
       name: 'Settings',

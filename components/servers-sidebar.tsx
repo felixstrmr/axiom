@@ -50,7 +50,7 @@ function ServerItem(server: ServerItemProps) {
 
   return (
     <Link
-      href={`/${server.id}`}
+      href={`/servers/${server.id}`}
       className={cn(
         'flex h-8 items-center gap-2 rounded-md px-2 transition-colors',
         server.isActive
